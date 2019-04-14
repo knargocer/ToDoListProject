@@ -1,7 +1,9 @@
 { 
-	"task":
-	  {"Deadline":,
-	       "Hours spend":,
-		  "Priority
-    }
+ "specification": {
+   "task": [
+	   "Name:",
+	   "Hours spend":,
+	   "Priority,
+   ]
+  }
 }
