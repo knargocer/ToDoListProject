@@ -2,6 +2,7 @@
  "specification": {
    "task": [
 	   "Name",
+	   "Deadline",
 	   "Hours spend",
 	   "Priority,
    ]
