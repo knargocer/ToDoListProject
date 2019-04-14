@@ -1,5 +1,7 @@
-var jason = {
-	"task" : "Programming Homework",
-	"Deadline" : "15/05/2019",
-	"Priority" : "1 out of 5"
-};
+{ 
+	"task": {
+	  "Deadline":
+	    "Hours spend":
+		"Priority":
+    }
+}
