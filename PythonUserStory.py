@@ -42,16 +42,14 @@ def main():
             print(object)
 
 
-        number_of_tasks = input ("enter the number of tasks you want to accomplish?")
-        task_answer = input("Please enter the ask you want to accomplish")
-        answer_to_question = input("Enter the name of the task.")
+        task_answer = input("Please enter the task you want to accomplish")
         deadline_question = input("Enter the deadline of the task")
         time_question = input("Enter the time it will take to accomplish it")
-        answer = {'Number': number_of_tasks,
-                  'Task': task_answer,
-                  'Answer': answer_to_question,
+        answer_to_question = input("Enter the priority of the task.")
+        answer = {'Task': task_answer,
                   'Deadline': deadline_question,
-                  'Time': time_question}
+                  'Time': time_question
+                  'Priority': answer_to_question,}
 
 
         data['UserStory2'].remove(
