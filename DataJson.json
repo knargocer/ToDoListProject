@@ -1,8 +1,7 @@
 { 
-	"task": {
-	  [
-            "Deadline":,
+	"task":
+	  {"Deadline":,
 	       "Hours spend":,
-		  "Priority]
+		  "Priority
     }
 }
