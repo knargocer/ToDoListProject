@@ -1,11 +1,15 @@
 import json
-with open('DataJson.json') as data_file:
-    data = json.load(data_file)
-task=data["task"]
-print(task)
-deadline=data["deadline"]
-print(deadline)
-hours spend=data["hours spend"]
-print(hours spend)
-priority=data["priority"]
-print(priority)
+def main():
+
+    data = {}
+    data['UserData2'] = []
+    data['UserData2'].append({
+        'number': 1,
+        'question':'What are the tasks you need to accomplish ?',
+        'answer':'Programming project'
+    })
+
+    with open('data.txt', 'w') as outfile:
+        json.dump(data, outfile)
+
+main()
