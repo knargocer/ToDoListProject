@@ -1,10 +1,10 @@
 import json
 
-def new_task();
+def new_task():
     with open("DataJson.json") as data:
         data_dict = json.load(data)
         data.write(json.dumps(data_dict))
-        
+
 def task_modifaction():
     with open("DataJson.json") as data:
             data_dict = json.load(data)
@@ -29,15 +29,16 @@ def task_modifaction():
 
             with open('data.json', 'w') as outfile:
                 outfile.write(json.dump(data, outfile))
-                
-        else :
-            print("file does not exist")
-            return user_data
+                else:
+                print("file does not exist")
+                return user_data
 
 def see_all_tasks():
     with open("DataJson.json") as data:
         data_dict = json.load(data)
 
+        for object in DataJson.json:
+            print(object)
 
 
 def main():
@@ -45,7 +46,7 @@ def main():
     with open('data.txt') as DataJson:
         data_dict = json.load(DataJson.json)
 
-    DataJson= data["DataJson"]
+    DataJson= data["DataJson.json"]
 
     print("0: To fill in a new task")
     print("1: To see a all tasks")
@@ -53,30 +54,25 @@ def main():
 
     user_choice = int(input(""));
 
-    if user_choice == 0:
+    while user_choice == 0:
         user_question = input("Please insert a new task")
 
-        data['DataJson'].append({
+        data['DataJson.json'].append({
             "Task1": "",
             "Deadline": "",
             "Hours spend": ""
         })
 
-        with open('data.txt', 'w') as outfile:
-            json.dump(data, outfile)
+        return new_task()
 
-    elif user_choice == 1:
+    if user_choice == 1:
+
+        task_answer = data['DataJson']
+        return see_all_tasks()
+
+    else:
+        user_choice == 2
 
         task_answer = data['DataJson']
 
-        for object in questions_answer:
-            print(object)
-
-
-    elif user_choice == 2:
-
-        task_answer = data['DataJson']
-
-
-        for object in json_load['tasks'].keys():
-            print(object)
+        return task_modifaction()
