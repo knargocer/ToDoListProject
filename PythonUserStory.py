@@ -55,7 +55,7 @@ def main():
 
     user_choice = int(input(""));
 
-    while user_choice == 0:
+    if user_choice == 0:
         user_question = input("Please insert a new task")
 
 
@@ -67,14 +67,20 @@ def main():
 
         return new_task()
 
-    if user_choice == 1:
+    elif user_choice == 1:
 
         task_answer = data['DataJson']
         return see_all_tasks()
 
-    else:
+    elif:
         user_choice == 2
 
         task_answer = data['DataJson']
 
         return task_modifaction()
+        
+    else :
+        print("Please type 0, 1 or 2")
+        exit
+        
+main()
