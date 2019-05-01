@@ -1,4 +1,5 @@
 import json
+print("This is your ToDo list helper. It will help you organize your tasks. Please fill in the information bellow")
 
 def new_task():
     with open("DataJson.json") as data:
@@ -13,7 +14,7 @@ def task_modifaction():
             task_answer = input("Please enter the task you want to modify")
             json_load['tasks'][task_answer]['deadline'] = input("Enter the deadline of the task")
             json_load['tasks'][task_answer]['Time'] = input("Enter the time it will take to accomplish it")
-            answer = {'Task': task_answer,
+            new_answer = {'Task': task_answer,
                       'Deadline': deadline_question,
                       'Time':  time_question}
 
@@ -57,11 +58,12 @@ def main():
     while user_choice == 0:
         user_question = input("Please insert a new task")
 
+
         data['DataJson.json'].append({
             "Task1": "",
             "Deadline": "",
             "Hours spend": ""
-        })
+        }
 
         return new_task()
 
